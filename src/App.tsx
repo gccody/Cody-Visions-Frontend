@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      const response = await fetch('http://localhost:3000/images');
+      const response = await fetch(`${process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://api.codyvisions.com'}/images`);
       const data = await response.json();
       setImages(data);
       setLoading(false);
