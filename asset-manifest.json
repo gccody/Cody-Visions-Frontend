@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Cody-Visions-Frontend/static/css/main.b44f44bb.css",
-    "main.js": "/Cody-Visions-Frontend/static/js/main.7601908e.js",
+    "main.js": "/Cody-Visions-Frontend/static/js/main.4b43b444.js",
     "static/js/787.cda612ba.chunk.js": "/Cody-Visions-Frontend/static/js/787.cda612ba.chunk.js",
     "index.html": "/Cody-Visions-Frontend/index.html",
     "main.b44f44bb.css.map": "/Cody-Visions-Frontend/static/css/main.b44f44bb.css.map",
-    "main.7601908e.js.map": "/Cody-Visions-Frontend/static/js/main.7601908e.js.map",
+    "main.4b43b444.js.map": "/Cody-Visions-Frontend/static/js/main.4b43b444.js.map",
     "787.cda612ba.chunk.js.map": "/Cody-Visions-Frontend/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b44f44bb.css",
-    "static/js/main.7601908e.js"
+    "static/js/main.4b43b444.js"
   ]
 }
