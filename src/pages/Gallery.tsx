@@ -19,7 +19,6 @@ export const  Gallery = () => {
 
   return (
     <div>
-      <NavBar />
       <div className='content'>
         <div className='header'>
           <h2>Gallery</h2>

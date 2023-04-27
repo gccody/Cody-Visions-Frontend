@@ -125,13 +125,13 @@ html::-webkit-scrollbar {
   margin: 0px 15px;
 }
 
-.nav-bar-link, a {
+.nav-bar-link, .link {
   cursor: pointer;
   text-decoration: none;
   color: black;
   transition: all 0.2s ease-in-out;
 }
 
-.nav-bar-link:hover, a:hover {
+.nav-bar-link:hover, .link:hover {
   transform: scale(1.1);
 }
