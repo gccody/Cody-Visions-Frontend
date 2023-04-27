@@ -1,6 +1,6 @@
 {
   "short_name": "Cody Visions",
-  "name": "Cody Visions Website",
+  "name": "Cody Visions",
   "icons": [
     {
       "src": "favicon.ico",
@@ -16,6 +16,11 @@
       "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180, 167x167, 152x152, 120x120, 76x76, 60x60"
     }
   ],
   "start_url": ".",

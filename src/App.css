@@ -1,8 +1,14 @@
 html {
   padding: 0;
   margin: 0;
+  background-color: white;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+html,
+body {
+  overscroll-behavior-y: none;
+  height: 100%;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -22,6 +28,7 @@ html::-webkit-scrollbar {
   -moz-column-gap:5px;
   column-count:5;
   column-gap:5px;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -67,4 +74,64 @@ html::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+/* style the app bar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  background-color: bisque;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .nav-bar {
+    padding: 0px 5px !important;
+  }
+
+  .content {
+    padding-top: 50px !important;
+  }
+
+  .nav-bar-title {
+    font-size: 1.2em !important;
+  }
+}
+
+.content {
+  padding-top: 80px;
+}
+
+.nav-bar-title {
+  width: 100%;
+  cursor: default;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-bar-links {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.nav-bar-link {
+  margin: 0px 15px;
+}
+
+.nav-bar-link, a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-bar-link:hover, a:hover {
+  transform: scale(1.1);
 }
