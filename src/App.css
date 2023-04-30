@@ -1,7 +1,14 @@
+:root {
+  --color-lightest: #FFF4E0;
+  --color-light: #FFBF9B;
+  --color-dark: #B46060;
+  --color-darkest: #4D4D4D;
+}
+
 html {
   padding: 0;
   margin: 0;
-  background-color: white;
+  background-color: var(--color-lightest);
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -11,13 +18,19 @@ body {
   height: 100%;
 }
 
+* {
+  color: var(--color-darkest);
+  font-family: 'Roboto', sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 html::-webkit-scrollbar {
   display: none;
-}
-
-.container {
-  overflow: hidden;
 }
 
 #gallery {
@@ -79,10 +92,11 @@ html::-webkit-scrollbar {
 /* style the app bar */
 .nav-bar {
   display: flex;
+  z-index: 1;
   justify-content: space-between;
   align-items: center;
   padding: 5px 15px;
-  background-color: bisque;
+  background-color: var(--color-light);
   position: fixed;
   top: 0;
   width: 100%;
@@ -105,6 +119,12 @@ html::-webkit-scrollbar {
 
 .content {
   padding-top: 80px;
+  margin: 0px 5px;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
 }
 
 .nav-bar-title {
@@ -123,6 +143,10 @@ html::-webkit-scrollbar {
 
 .nav-bar-link {
   margin: 0px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  padding: 5px;
+  background-color: var(--color-dark);
 }
 
 .nav-bar-link, .link {
@@ -134,4 +158,114 @@ html::-webkit-scrollbar {
 
 .nav-bar-link:hover, .link:hover {
   transform: scale(1.1);
+}
+
+.card {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  transition: all 0.2s ease-in-out;
+  /* make the image fit the card */
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-image {
+  width: 125px;
+  height: 125px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.card-pic-horizontal {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50px;
+  display: inline;
+  margin: 0 auto;
+  margin-left: -25%;
+  height: 100%;
+  width: auto;
+}
+
+.card-pic-vertical {
+  height: auto;
+  object-fit: cover;
+  border-radius: 50px;
+  width: 100%;
+  height: auto;
+}
+
+.card-title, .card-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 15px 0px;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-light);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 70px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: var(--color-darkest);
+}
+
+.footer-link {
+  margin: 0px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  padding: 5px;
+}
+
+.footer-title {
+  margin: 0;
+  width: 100%;
+  cursor: default;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
 }
