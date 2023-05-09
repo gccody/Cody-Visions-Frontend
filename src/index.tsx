@@ -15,7 +15,7 @@ root.render(
     <HashRouter>
       <NavBar />
       <App />
-      <Footer />
+      {/* <Footer /> */}
     </HashRouter>
   </React.StrictMode>
 );

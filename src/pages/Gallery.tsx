@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css';
 import { getImageUrls } from '../utils/api';
-import { NavBar } from '../components/NavBar';
 
 export const  Gallery = () => {
   const [imgs, setImages] = useState<string[]>([]);
@@ -31,7 +30,7 @@ export const  Gallery = () => {
               {
                 imgs ? 
                 imgs.map((image, index) => (
-                  <img className="image" src={image} alt='' key={index}/>
+                  <img className="image" src={image} alt='' key={index} loading='lazy'/>
                 ))
                 : <h3>No images found</h3>
               }

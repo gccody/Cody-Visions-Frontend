@@ -11,6 +11,7 @@ html {
   background-color: var(--color-lightest);
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  /* overflow-y: scroll; */
 }
 html,
 body {
@@ -89,6 +90,16 @@ html::-webkit-scrollbar {
   flex-direction: column;
 }
 
+.content {
+  padding-top: 80px;
+  margin: 0px 5px;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
 /* style the app bar */
 .nav-bar {
   display: flex;
@@ -117,15 +128,6 @@ html::-webkit-scrollbar {
   }
 }
 
-.content {
-  padding-top: 80px;
-  margin: 0px 5px;
-  height: 100%;
-}
-
-.container {
-  height: 100%;
-}
 
 .nav-bar-title {
   width: 100%;
@@ -162,7 +164,7 @@ html::-webkit-scrollbar {
 
 .card {
   width: 15rem;
-  height: 15rem;
+  height: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -182,8 +184,8 @@ html::-webkit-scrollbar {
 } */
 
 .card-image {
-  width: 125px;
-  height: 125px;
+  width: 200px;
+  height: 200px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -226,8 +228,8 @@ html::-webkit-scrollbar {
   justify-content: center;
   width: 100%;
   height: 100%;
-  margin: 15px 0px;
-  width: 100%;
+  margin-top: 15px;
+  overflow-y: scroll;
 }
 
 .footer {
@@ -259,6 +261,7 @@ html::-webkit-scrollbar {
   border-radius: 5px;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
   padding: 5px;
+  text-align: center;
 }
 
 .footer-title {
