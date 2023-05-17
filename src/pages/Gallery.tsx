@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css';
-import { getImageUrls } from '../utils/api';
+import { getDownloadURL, getStorage, listAll, ref } from 'firebase/storage';
 
 export const  Gallery = () => {
   const [imgs, setImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
 
+  const addImage = (url: string) => setImages(prev => [...prev, url]);
+
   useEffect(() => {
-    (async () => {
-      setLoading(true);
-      const response = await getImageUrls();
-      const data = await response.json();
-      setImages(data);
-      setLoading(false);
-    })();
-  }, []); // eslit-disable-line react-hooks/exhaustive-deps
+    setLoading(true);
+    const storage = getStorage(); // Gets the storage bucket
+    const imagesRef = ref(storage, 'images'); // References the images folder
+    listAll(imagesRef).then((images) => { // Lists all the images in the folder
+      images.items.forEach((imageRef) => { // For each image in the folder
+        getDownloadURL(imageRef).then((url) => { // Get the download URL
+          addImage(url); // Add the URL to the images array
+        });
+      });
+    });
+    setLoading(false);
+  }, []);
 
   return (
     <div>
