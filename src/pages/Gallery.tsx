@@ -24,26 +24,19 @@ export const  Gallery = () => {
 
   return (
     <div>
-      <div className='content'>
-        <div className='header'>
-          <h2>Gallery</h2>
-        </div>
-        <div className='container'>
+      {
+        loading ? <h3>Loading...</h3>
+        : 
+        <div id='gallery'>
           {
-            loading ? <h3>Loading...</h3>
-            : 
-            <div id='gallery'>
-              {
-                imgs ? 
-                imgs.map((image, index) => (
-                  <img className="image" src={image} alt='' key={index} loading='lazy'/>
-                ))
-                : <h3>No images found</h3>
-              }
-            </div>
+            imgs ? 
+            imgs.map((image, index) => (
+              <img className="image" src={image} alt='' key={index} loading='lazy'/>
+            ))
+            : <h3>No images found</h3>
           }
         </div>
-      </div>
+      }
     </div>
   );
 }

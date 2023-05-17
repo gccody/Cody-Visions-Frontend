@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
-import { NavBar } from './components/NavBar';
 import { initializeApp } from 'firebase/app';
 
 const root = ReactDOM.createRoot(
@@ -26,7 +25,6 @@ initializeApp(firebaseConfig);
 root.render(
   // <React.StrictMode>
     <HashRouter>
-      <NavBar />
       <App />
       {/* <Footer /> */}
     </HashRouter>
