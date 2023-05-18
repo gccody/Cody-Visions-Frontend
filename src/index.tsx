@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
 import { initializeApp } from 'firebase/app';
+import { Footer } from './components/Footer';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -26,7 +27,7 @@ root.render(
   // <React.StrictMode>
     <HashRouter>
       <App />
-      {/* <Footer /> */}
+      <Footer />
     </HashRouter>
   // </React.StrictMode>
 );

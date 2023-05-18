@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css';
 import { getDownloadURL, getStorage, listAll, ref } from 'firebase/storage';
+import { Button } from '../components/Button';
 
 export const  Gallery = () => {
   const [imgs, setImages] = useState<string[]>([]);
@@ -23,9 +24,12 @@ export const  Gallery = () => {
   }, []);
 
   return (
-    <div>
+    <div className='content' style={{ minHeight: '100vh' }}>
+      {/* create a button to go back to /home */}
+      <Button text='Home' link='/'/>
+      <h1 className='header'>Gallery</h1>
       {
-        loading ? <h3>Loading...</h3>
+        loading ? <p style={{ fontSize: '10rem' }}>Loading...</p>
         : 
         <div id='gallery'>
           {
